@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+   
+</head>
+<body>
+    
+    <div id="navbar">
+        <div class="navbar-text">
+            <h2>Expense Tracker</h2>
+            <button id="home_btn">Home</button>
+            <p id="premiummessage">Premium User</p>
+           
+        </div>
+        <div class="navbar-buttons">
+            <button id="btn_download" hidden>Download</button>
+    <button id="btn_leader_board" hidden>LeaderBoard</button>
+    <button id="premium">Buy Membership</button> 
+            <button id="btn_Sign_out">Sign Out</button>
+        </div>
+    </div>
+    <!-- <div style="position: fixed; top: 20px; right: 20px;">
+        <button id="premium">Buy Membership</button>    -->
+    <!-- </div>  -->
+
+    <div id="expense-form-container">
+        <form action="/users/main" method="post" id="expense-form">
+            
+                <label for="category">Select Category:</label>
+                <select name="category" id="category">
+                    <option value="Fuel">Fuel</option>
+                    <option value="Groceries & Pet Supplies">Groceries & Pet Supplies</option>
+                    <option value="Toys, Children & Baby">Toys, Children & Baby</option>
+                    <option value="Payments & Bookings">Payments & Bookings</option>
+                    <option value="Office & Professional">Office & Professional</option>
+                    <option value="Books & Education">Books & Education</option>
+                    <option value="Electronics & Gadgets">Electronics & Gadgets</option>
+                    <option value="Health & Wellness">Health & Wellness</option>
+                    <option value="Home & Garden">Home & Garden</option>
+                    <option value="Fashion & Clothing">Fashion & Clothing</option>
+                    <option value="Travel & Leisure">Travel & Leisure</option>
+                    <option value="Sports & Fitness">Sports & Fitness</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+                    <option value="Tech & Accessories">Tech & Accessories</option>
+                    <option value="Art & Craft">Art & Craft</option>
+                    <option value="Hobbies & DIY">Hobbies & DIY</option>
+                </select>
+                
+               
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required >
+           
+                <!-- <br> -->
+                <label for="Amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            
+                <br>
+           
+            <button id="submit" type="submit">Add Expense</button>
+        </form>
+    </div>
+     <!-- <ul id="items">
+                    <li></li>
+                </ul> -->
+   
+                <!--  <br> -->
+
+    <div class="container" id="expenses-container">
+        <h2>User Expenses:</h2>
+        <table id="expenses-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="expenses-body">
+                 <!-- Expenses will be dynamically added here  -->
+            </tbody>
+        </table>
+        <!-- Pagination will be added here -->
+        <div id="pagination"></div>
+    </div>
+    <!-- <button onclick="download()" id="downloadexpense">Download File</button> -->
+    
+         <!-- <h2 id="leader_board_title"></h2> -->
+         <!-- <ul id="leader_board_list" class="list-group"></ul>  -->
+
+    <div class="container" id="leaderboard-container" hidden >
+        <h2 id="leader_board_title"></h2>
+        <table id="leader_board_table">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Name</th>
+                    <th>Total Expenses</th>
+                </tr>
+            </thead>
+            <tbody id="leader_board_body">
+                 <!-- Leaderboard will be dynamically added here  -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="premium_content_container" style="display: none;">
+        <div id="limit_rows_container">
+            <label for="limit">No Of rows</label>
+            <input type="number" id="rows_limit">
+            <button id="limit">submit</button>
+        </div>
+        <div id="downloadHistoryContainer">
+            <label for="">Download History</label>
+            <button id="toggleDownloadHistoryBtn">Toggle Download History</button>
+            <ul id="downloadHistoryList" style="display: none;"></ul>
+        </div>
+       
+    </div>
+
+
+    <script src="./main.js"></script>
+
+</body>
+</html>

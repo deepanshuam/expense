@@ -1,0 +1,400 @@
+body {
+  width: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #d1caf0; /* Light blue background */
+}
+#navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #d4e6f6; */
+  background: linear-gradient(135deg, #0056b3, #003d7f);
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#navbar .navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+#navbar .navbar-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+#navbar .navbar-text p#premiummessage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #8E44AD;
+  background-color: #F9F9F9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#navbar .navbar-buttons {
+  display: flex;
+  align-items: center;
+}
+#home_btn{
+  background-color: #653fe3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#navbar .navbar-buttons button {
+  background-color: #653fe3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#navbar .navbar-buttons button:hover {
+  background-color: #653fe3;
+}
+
+#navbar .navbar-buttons button:active {
+  background-color: #653fe3;
+  /* box-shadow: 0 5px #666; */
+  /* transform: translateY(4px); */
+}
+
+#btn_leader_board, #btn_download {
+  background-color: #000000;
+  color: white;
+  font-family: 'Algerian';
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+#btn_leader_board:hover, #btn_download:hover {
+  background-color: #000000;
+  color: white;
+}
+#navbar .navbar-buttons button:active {
+  background-color: #000000;
+  /* box-shadow: 0 5px #666; */
+  /* transform: translateY(4px); */
+}
+
+#expense-form-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  /* background-color:#008575; */
+  width: 85%;
+  margin: 20px auto;
+  /* background-color: #fff; */
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text */
+}
+
+form {
+    /* width: 500px; */
+    /* width:1000px; */
+    padding: 20px;
+    background-color:#ecfaff;
+    /* background-color: #fff; White background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    /* display: block; */
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333; /* Dark gray text */
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    /* width: 50%; */
+    padding: 10px;
+    border: 1px solid #b0c4de; /* Light blue border */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    width: 90%;
+    padding: 10px;
+    background: linear-gradient(135deg, #0056b3, #003d7f);
+    /* background-color: #007bff; Dark blue button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+  #premiumuser{
+background-color: #f1c40f;
+display: block;
+  }
+  #premiummessage {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    font-size: 15px;
+    font-weight: bold;
+    color: #8E44AD; /* Purple color */
+    background-color: #F9F9F9; 
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+   } 
+
+  .hidden{
+    display: none;
+  }
+  
+  #premium:hover {
+    background-color: #e0b90f;
+  }
+/* Styling the container */
+#expenses-container {
+  margin: 20px;
+  width: 85%;
+}
+
+/* Styling the heading */
+#expenses-container h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling the table */
+#expenses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Styling table headers */
+#expenses-table th {
+  /* background-color: #333; */
+  background: linear-gradient(135deg, #0056b3, #003d7f);
+  color: #ffffff;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Styling table rows */
+#expenses-table tbody  {
+  background-color: #ecfaff;
+  font-family: 'Roboto', sans-serif; /* Example font family */
+    font-size: 16px; /* Example font size */
+    color: #333; /* Example text color */
+}
+
+#expenses-table tbody tr:hover {
+  /* background-color: #ecfaff; */
+  background: linear-gradient(135deg, #0056b3, #003d7f);
+ color:white;
+}
+
+/* Styling table cells */
+#expenses-table td {
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* Styling the edit and delete buttons */
+#expenses-table .edit-button,
+#expenses-table .delete-button {
+  padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #161515;
+    color: #fff;
+}
+
+#expenses-table .edit-button:hover,
+#expenses-table .delete-button:hover {
+  text-decoration: underline;
+}
+#expenses-table .edit-button {
+  margin-right: 5px;
+}
+
+/* Styling the leaderboard container */
+#leaderboard-container {
+  margin: 20px;
+  width: 85%;
+}
+
+/* Styling the leaderboard heading */
+#leaderboard-container h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling the leaderboard table */
+#leader_board_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Styling leaderboard table headers */
+#leader_board_table th {
+  background: linear-gradient(135deg, #0056b3, #003d7f);
+  color: #ffffff;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+}
+#leader_board_body{
+  background-color: #ecfaff;
+  font-family: 'Roboto', sans-serif; /* Example font family */
+  font-size: 16px; /* Example font size */
+  color: #333;
+}
+
+/* Styling leaderboard table rows */
+#leader_board_table tbody  {
+  background-color: #ecfaff;
+  font-family: 'Roboto', sans-serif; /* Example font family */
+  font-size: 16px; /* Example font size */
+  color: #333; /* Example text color */
+}
+
+
+/* Hover effect on leaderboard table rows */
+#leader_board_table tbody tr:hover {
+  background: linear-gradient(135deg, #0056b3, #003d7f);
+  color: white;
+}
+
+/* Styling leaderboard table cells */
+#leader_board_table td {
+  padding: 15px;
+  font-size: 14px;
+}
+#premium_content_container {
+  display: flex;
+  /* justify-content: space-between; Aligns the two containers at the ends of the flex container */
+}
+#downloadHistoryContainer {
+  
+  display: flex;
+  flex-direction: column;
+ 
+  width: 85%;
+  margin: 10px auto;
+  /* padding: 20px; */
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+#downloadHistoryContainer h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#downloadHistoryList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#downloadHistoryList li {
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#toggleDownloadHistoryBtn {
+  margin-bottom: 10px;
+  /* width: 50%; */
+  padding: 10px;
+  background: linear-gradient(135deg, #0056b3, #003d7f);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#limit{
+  margin-bottom: 10px;
+  /* width: 50%; */
+  padding: 10px;
+  background: linear-gradient(135deg, #0056b3, #003d7f);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+#pagination button {
+  margin: 0 5px; /* Adjust margin as needed */
+  padding: 3px 8px; /* Adjust padding as needed */
+  border: none; /* Remove border */
+  background-color: transparent; /* Make background transparent */
+  cursor: pointer;
+  font-size: 14px; /* Adjust font size as needed */
+  text-decoration: underline; /* Add underline */
+}
+
+#pagination button:hover {
+  text-decoration: none; /* Remove underline on hover */
+  border-bottom: 1px solid #000; /* Add underline on hover */
+}
